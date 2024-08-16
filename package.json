@@ -1,0 +1,23 @@
+{
+  "name": "simplify-error",
+  "version": "1.0.0",
+  "description": "catch unknown errors and transform it to a simple object",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deflexable/simplify-error.git"
+  },
+  "keywords": [
+    "simple-error",
+    "simplify-error"
+  ],
+  "author": "Anthony Onabanjo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deflexable/simplify-error/issues"
+  },
+  "homepage": "https://github.com/deflexable/simplify-error#readme"
+}

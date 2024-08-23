@@ -1,6 +1,6 @@
 # simplify-error
 
-catch unknown errors and transform it to an object as ```json { simpleError: { error: string, message: string } } ```
+catch unknown errors and transform it to an object as `{ simpleError: { error: string, message: string } }`
 
 ## Installation
 
@@ -16,7 +16,7 @@ yarn add simplify-error
 ## Example
 
 ```js
-import { simplifyError, simplifyCaughtError } from 'guard-object';
+import { simplifyError, simplifyCaughtError } from 'simplify-error';
 
 // returns { simpleError: { error: 'Error', message: 'Some error description' } }
 simplifyError('Error', 'Some error description');

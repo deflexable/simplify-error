@@ -1,10 +1,10 @@
 
 const simplifyError = (error, message) => stringifyCaughtError({
-    simpleError: { error, message }
+    simpleError: { error: `${error}`, message: `${message}` }
 });
 
 const simplifyCaughtError = (error) => {
-    if (error.error && error.message)
+    if (error?.error && error?.message)
         error = { simpleError: error };
 
     return error?.simpleError ? stringifyCaughtError(error) : simplifyError('Error', error);
@@ -26,13 +26,16 @@ const stringifyCaughtError = ({ simpleError: { error, message } }) => {
 }
 
 const transformError = (error) => {
-    if (error?.name && error?.message)
-        return {
-            simpleError: {
-                error: `${error.name}`,
-                message: `${error.message}`
-            }
-        };
+    if (
+        error?.name &&
+        error?.message &&
+        error instanceof Error
+    ) return {
+        simpleError: {
+            error: `${error.name}`,
+            message: `${error.message}`
+        }
+    };
 }
 
 const isObject = (o) => o !== null &&
